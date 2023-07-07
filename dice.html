@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Roll</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 24px;
+      margin-top: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    a {
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function rollDice() {
+      var result = Math.floor(Math.random() * 6) + 1;
+      document.getElementById("result").innerText = "You rolled: " + result;
+    }
+  </script>
+</head>
+<body>
+  <h1>Dice Roll</h1>
+  <button onclick="rollDice()"><i class="fas fa-dice"></i> Roll</button>
+  <p id="result"></p>
+  <br><br>
+  <a href="TableTop.html"><i class="fas fa-arrow-left"></i> Pick Again</a>
+</body>
+</html>

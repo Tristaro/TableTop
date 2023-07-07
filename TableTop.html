@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice or Coin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    select {
+      font-size: 18px;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 24px;
+      margin-top: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    a {
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function redirectToGame() {
+      var choice = document.getElementById("choice").value;
+      
+      if (choice === "coin") {
+        window.location.href = "coin.html";
+      } else if (choice === "dice") {
+        window.location.href = "dice.html";
+      }
+    }
+  </script>
+</head>
+<body>
+    <h1>Choose an Option</h1>
+    <select id="choice">
+      <option value="coin">Flip a Coin</option>
+      <option value="dice">Roll a Dice</option>
+    </select>
+    <br>
+    <button onclick="redirectToGame()">Play</button>
+    <br><br>
+    <a href="TableTop.html" style="font-size: 18px;"> </a>
+  </body>
+  </html>
+  
